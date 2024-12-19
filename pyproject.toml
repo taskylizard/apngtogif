@@ -1,17 +1,17 @@
-[build-system]
-requires = ["maturin>=1.7,<2.0"]
-build-backend = "maturin"
-
 [project]
 name = "apngtogif"
+version = "0.1.0"
+description = "A Python package for converting APNG files to animated GIFs"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dynamic = ["version"]
 dependencies = ["maturin>=1.7.8"]
+authors = [
+    { name = "taskylizard", email = "75871323+taskylizard@users.noreply.github.com" },
+]
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
@@ -23,3 +23,7 @@ cache-keys = [
     { file = "src/Cargo.toml" },
     { file = "**/*.rs" },
 ]
+
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
